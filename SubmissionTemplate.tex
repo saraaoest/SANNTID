@@ -1,0 +1,156 @@
+\documentclass[a4paper, 12pt, english]{article}
+
+\RequirePackage[USenglish]{babel}
+\RequirePackage{amsmath,amssymb, bm}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{graphicx}
+\RequirePackage{multirow}
+\RequirePackage{fullpage}
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\RequirePackage{tcolorbox}
+\RequirePackage{fmtcount}
+\RequirePackage{refcount}
+\RequirePackage{soul}
+
+\newcounter{exprob}
+\newcounter{exsubprob}
+
+\newcommand{\problem}{\refstepcounter{exprob} \setcounter{exsubprob}{0} \subsubsection*{Problem \arabic{exprob}}}
+
+\newcommand{\studentName}[1]{\newcommand{\name}{#1}}
+\newcommand{\Excercise}[1]{\newcommand{\exercise}{#1}}
+
+\newenvironment{subprob}
+{\refstepcounter{exsubprob}
+  \begin{enumerate}
+    \item[\textbf{\alph{exsubprob})}]}
+{\end{enumerate}}
+
+\renewcommand{\maketitle}[2]{
+  \begin{flushleft}
+  \begin{tabular}{|lr|}
+  \hline
+    \multicolumn{2}{|c|}{ \textbf{\Large TTK4135 Optimization and Control}} \\
+    \multicolumn{2}{|c|}{\textit{Student Submission}} \\
+    \multicolumn{2}{|c|}{\rule{0.9737\textwidth}{0pt}} \\
+    \footnotesize Norwegian University of Science and Technology				& \textbf{Exercise \exercise}	\\
+    \footnotesize Department of Engineering Cybernetics									&	\name    		\\
+    \hline 
+    \end{tabular}
+  \end{flushleft}
+}
+
+\fancypagestyle{plain}{%
+  \fancyhf{} % clear all header and footer fields
+  \fancyfoot[L]{\name}
+  \fancyfoot[R]{Page\ \thepage\ of\ \pageref{LastPage}} % except the center
+    \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+\pagestyle{plain}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%% DOCUMENT BEGINS HERE:
+\begin{document}
+
+
+
+
+%%%% ENTER EXCERCISE NUMBER AND NAME:
+\studentName{John E. Doe} % name
+\Excercise{1} % excercise number
+
+
+
+\maketitle 
+
+
+
+  
+%%%%%%%%%%% ENTER YOUR SOLUTIONS:
+\problem
+
+
+%%% ANSWER FIRST PROBLEM HERE:
+\begin{subprob}
+    Solution to problem 1a).
+\end{subprob}	
+\begin{subprob}
+    Solution to problem 1b).
+\end{subprob}
+
+
+%%% NEXT PROBLEM
+\problem
+\begin{subprob}
+	
+\end{subprob}	
+\begin{subprob}
+
+\end{subprob}
+
+
+
+
+%%% CONTINUE LIKE THIS TO ANSWER MORE PROBLEMS
+\problem
+\begin{subprob}
+	
+\end{subprob}	
+\begin{subprob}
+
+\end{subprob}
+
+
+
+
+\problem
+\begin{subprob}
+	
+\end{subprob}	
+\begin{subprob}
+
+\end{subprob}
+
+
+
+
+\problem
+\begin{subprob}
+	
+\end{subprob}	
+\begin{subprob}
+
+\end{subprob}
+
+
+
+
+\problem
+\begin{subprob}
+	
+\end{subprob}	
+\begin{subprob}
+
+\end{subprob}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} %%%%%% END OF DOCUMENT
